@@ -1,0 +1,404 @@
+:root {
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --grey: rgba(46, 47, 66, 0.7);
+  --white: #fff;
+  --dairy: #fcfcfc;
+
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Raleway", sans-serif;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+body {
+  padding-top: 72px;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  height: auto;
+}
+
+/* Navbar başlangıç */
+.navbar-wrapper {
+  width: 100%;
+  height: 72px;
+  padding-left: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  border-bottom: 1px solid rgba(231, 233, 252, 1);
+}
+
+.nav {
+  display: flex;
+  position: relative;
+}
+
+.logo-header {
+  font-family: var(--second-family);
+  font-size: 18px;
+  font-weight: bold;
+  color: #4d5ae5;
+  text-decoration: none;
+  position: absolute;
+  top: 24px;
+  left: 156px;
+  margin: 0 auto;
+}
+
+.logo-header span {
+  color: var(--navy-blue);
+}
+/* Navbar başlangıç */
+
+/* menu Başlangıç */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  left: 347px;
+  top: 24px;
+}
+
+.menu li a {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--navy-blue);
+  text-decoration: none;
+}
+.menu li a:hover {
+  color: var(--ocean);
+}
+.menu .studio:active {
+  color: var(--ocean);
+  font-weight: bold;
+}
+
+.address ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  position: absolute;
+  left: 1133px;
+  top: 25px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.address ul li a {
+  color: var(--slate);
+  text-decoration: none;
+  display: flex;
+}
+.address ul li a:hover {
+  color: #404bbf;
+}
+/* menu Bitiş */
+
+/* Hero Başlangıç */
+.hero-image {
+  background-color: var(--navy-blue);
+  width: 1440px;
+  padding: 0 50px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image .container {
+  width: 1440px;
+
+  padding: 0 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image .text {
+  color: var(--white);
+  font-size: 56px;
+  max-width: 496px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.container > button {
+  margin-top: 40px;
+  background-color: var(--iris);
+  color: var(--white);
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.container > button:hover {
+  background-color: var(--ocean);
+}
+/* Hero Bitiş */
+
+/* Section 1 Başlangıç */
+.section1 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1228px;
+  margin: 100px auto 40px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.section1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 264px;
+  height: 72px;
+}
+
+.section1 ul li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: var(--slate);
+}
+
+.section1 h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--navy-blue);
+}
+
+.section1 p {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02px;
+  color: var(--slate);
+}
+
+/* Section 1 Bitiş */
+
+/* Our Team Başlangıç */
+.our-team {
+  background-color: var(--cloud);
+  width: 100vw;
+  padding: 100px 0;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.our-team .container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 140px;
+  box-sizing: border-box;
+}
+
+.our-team-h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--navy-blue);
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  margin-bottom: 60px;
+  display: inline-block;
+}
+
+.our-team-list {
+  display: flex;
+  flex-wrap: nowrap; /* Satır aşağı kaymasın */
+  justify-content: center; /* Ortala */
+}
+
+.team-member {
+  max-width: 264px;
+  background-color: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-info {
+  height: 96px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Dikey ortala */
+  align-items: center; /* Yatay ortala */
+  text-align: center;
+  padding: 0 10px; /* Kenar boşluğu */
+}
+
+.team-info h3 {
+  color: var(--navy-blue);
+  margin: 0;
+}
+
+.team-info p {
+  color: var(--slate);
+  margin: 5px 0 0 0;
+}
+
+.team-member {
+  max-width: 264px;
+  background-color: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  gap: 32px;
+}
+/* Our Team Bitiş */
+
+/* Our Portfolio Başlangıç */
+.our-portfolio {
+  width: 100%;
+  max-width: 1128px;
+  margin: 0 auto;
+
+  padding: 200px 0;
+}
+.our-portfolio h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  width: 218px;
+  height: 40px;
+  margin: -60px auto 40px auto;
+  position: relative;
+  color: var(--navy-blue);
+}
+
+.our-portfolio-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.our-portfolio-list-row-1,
+.our-portfolio-list-row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  justify-content: center;
+}
+.our-portfolio-list-row-1 {
+  margin-top: -50px;
+}
+.our-portfolio-list-row-2 {
+  margin-top: 80px;
+}
+.our-portfolio-card {
+  width: 360px;
+  border: 1px solid var(--cornflower);
+  box-sizing: border-box;
+  background-color: var(--white);
+  list-style: none;
+  margin-bottom: -20px;
+}
+
+.our-portfolio-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border: 1px;
+}
+
+.portfolio-info {
+  padding: 32px 16px;
+  border-bottom: 1px solid var(--cornflower);
+
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: left;
+}
+.portfolio-info h3 {
+  color: var(--navy-blue);
+}
+.portfolio-info p {
+  margin-top: 12px;
+  color: var(--slate);
+}
+/* Our Portfolio Bitiş */
+
+/* Footer başlangıç */
+
+footer {
+  background-color: var(--navy-blue);
+  width: 100%;
+  height: 312px;
+  color: var(--white);
+}
+
+footer .container {
+  max-width: 1200px;
+}
+
+.footer .logo a {
+  font-family: var(--second-family);
+  color: var(--iris);
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.03em;
+  margin-top: 100px;
+}
+
+.logo a span {
+  color: var(--white);
+}
+
+.footer p {
+  font-family: var(--font-family);
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02px;
+  width: 264px;
+  height: 112px;
+  text-align: justify;
+  margin-left: 40px;
+}
+/* Footer Bitiş */
