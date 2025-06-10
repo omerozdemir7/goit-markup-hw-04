@@ -1,4 +1,4 @@
-/* ===================== :ROOT DEĞİŞKENLERİ BAŞLANGIÇ ===================== */
+/* ===================== :ROOT START ===================== */
 :root {
   --iris: #4d5ae5;
   --ocean: #404bbf;
@@ -16,9 +16,9 @@
   --font-family: "Roboto", sans-serif;
   --second-family: "Raleway", sans-serif;
 }
-/* ===================== :ROOT DEĞİŞKENLERİ BİTİŞ ===================== */
+/* ===================== :ROOT END ===================== */
 
-/* ===================== GENEL RESET & BODY BAŞLANGIÇ ===================== */
+/* ===================== BODY START ===================== */
 * {
   margin: 0 auto;
   padding: 0;
@@ -39,9 +39,9 @@ body {
   overflow-x: hidden;
   height: auto;
 }
-/* ===================== GENEL RESET & BODY BİTİŞ ===================== */
+/* ===================== BODY END ===================== */
 
-/* ===================== NAVBAR BAŞLANGIÇ ===================== */
+/* ===================== NAVBAR START ===================== */
 .navbar-wrapper {
   width: 100%;
   height: 72px;
@@ -74,9 +74,9 @@ body {
 .logo-header span {
   color: var(--navy-blue);
 }
-/* ===================== NAVBAR BİTİŞ ===================== */
+/* ===================== NAVBAR END ===================== */
 
-/* ===================== MENÜ BAŞLANGIÇ ===================== */
+/* ===================== MENU START ===================== */
 .menu {
   list-style: none;
   display: flex;
@@ -100,7 +100,7 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  top: 44px;
+  top: 45px;
 
   width: 48px;
   height: 4px;
@@ -134,9 +134,9 @@ body {
 .address ul li a:hover {
   color: #404bbf;
 }
-/* ===================== MENÜ BİTİŞ ===================== */
+/* ===================== MENU END ===================== */
 
-/* ===================== HERO BÖLÜMÜ BAŞLANGIÇ ===================== */
+/* ===================== HERO-İMAGE START ===================== */
 .hero-image {
   background-color: var(--grey);
   width: 1440px;
@@ -187,9 +187,9 @@ body {
 .container > button:hover {
   background-color: var(--ocean);
 }
-/* ===================== HERO BÖLÜMÜ BİTİŞ ===================== */
+/* ===================== HERO-İMAG END ===================== */
 
-/* ===================== BOX İKON KUTUSU BAŞLANGIÇ ===================== */
+/* ===================== İCON BOX START ===================== */
 .box {
   background-color: var(--cloud);
   height: 112px;
@@ -206,9 +206,9 @@ body {
 .box svg {
   display: block;
 }
-/* ===================== BOX İKON KUTUSU BİTİŞ ===================== */
+/* ===================== İCON BOX END ===================== */
 
-/* ===================== SECTION 1 BAŞLANGIÇ ===================== */
+/* ===================== SECTION 1 START ===================== */
 .section1 .container {
   display: flex;
   flex-wrap: wrap;
@@ -250,9 +250,9 @@ body {
   letter-spacing: 0.02px;
   color: var(--slate);
 }
-/* ===================== SECTION 1 BİTİŞ ===================== */
+/* ===================== SECTION 1 END ===================== */
 
-/* ===================== OUR TEAM BAŞLANGIÇ ===================== */
+/* ===================== OUR TEAM START ===================== */
 .our-team {
   background-color: var(--cloud);
   width: 100vw;
@@ -343,14 +343,14 @@ body {
   fill: var(--cloud);
   transition: fill 0.3s ease;
 }
-/* ===================== OUR TEAM BİTİŞ ===================== */
+/* ===================== OUR TEAM END ===================== */
 
-/* ===================== OUR PORTFOLIO BAŞLANGIÇ ===================== */
+/* ===================== OUR PORTFOLIO START ===================== */
+
 .our-portfolio {
   width: 100%;
   max-width: 1128px;
   margin: 0 auto;
-
   padding: 200px 0;
 }
 .our-portfolio h2 {
@@ -385,6 +385,7 @@ body {
 .our-portfolio-list-row-2 {
   margin-top: 80px;
 }
+
 .our-portfolio-card {
   position: relative;
   width: 360px;
@@ -403,9 +404,10 @@ body {
   display: block;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 
-/* Görseli kaplayan overlay */
+/* Overlay */
 .our-portfolio-card .overlay {
   position: absolute;
   top: 0;
@@ -419,16 +421,21 @@ body {
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s ease;
-  pointer-events: none;
+
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
   z-index: 2;
 }
 
-.our-portfolio-card:hover .overlay {
+.our-portfolio-card .overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.our-portfolio-card label:active ~ .overlay {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .portfolio-info {
@@ -439,6 +446,7 @@ body {
   gap: 8px;
 
   text-align: left;
+  cursor: pointer;
 }
 .portfolio-info h3 {
   color: var(--navy-blue);
@@ -447,9 +455,9 @@ body {
   margin-top: 12px;
   color: var(--slate);
 }
-/* ===================== OUR PORTFOLIO BİTİŞ ===================== */
+/* ===================== OUR PORTFOLIO END ===================== */
 
-/* ===================== FOOTER BAŞLANGIÇ ===================== */
+/* ===================== FOOTER START ===================== */
 footer {
   background-color: var(--navy-blue);
   width: 100%;
@@ -494,9 +502,9 @@ footer .container {
   top: 50px;
   position: relative;
 }
-/* ===================== FOOTER BİTİŞ ===================== */
+/* ===================== FOOTER END ===================== */
 
-/* ===================== FOOTER SOSYAL MEDYA BAŞLANGIÇ ===================== */
+/* ===================== FOOTER SOCİALSTART ===================== */
 .footer .social-icons {
   gap: 16px;
 }
@@ -536,4 +544,4 @@ footer .container {
   height: 24px;
   fill: var(--cloud);
 }
-/* ===================== FOOTER SOSYAL MEDYA BİTİŞ ===================== */
+/* ===================== FOOTER SOCİAL END ===================== */
