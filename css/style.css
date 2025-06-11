@@ -138,7 +138,7 @@ body {
 
 /* ===================== HERO-İMAGE START ===================== */
 .hero-image {
-  background-color: var(--grey);
+  background-color: var(--navy-blue);
   width: 1440px;
   padding: 0 50px;
   height: 600px;
@@ -150,7 +150,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(./images/background.jpg);
+    url(../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -334,7 +334,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease;
 }
 
 .icon-wrapper .icon {
@@ -343,6 +342,10 @@ body {
   fill: var(--cloud);
   transition: fill 0.3s ease;
 }
+.icon-wrapper:hover {
+  background-color: var(--ocean);
+}
+
 /* ===================== OUR TEAM END ===================== */
 
 /* ===================== OUR PORTFOLIO START ===================== */
@@ -385,69 +388,72 @@ body {
 .our-portfolio-list-row-2 {
   margin-top: 80px;
 }
-
+.overlay-content {
+  top: -140px;
+  position: relative;
+}
 .our-portfolio-card {
   position: relative;
   width: 360px;
+  height: 420px;
+  margin-bottom: 20px;
+  list-style: none;
+  cursor: pointer;
   border: 1px solid var(--cornflower);
   box-sizing: border-box;
   background-color: var(--white);
-  list-style: none;
-  margin-bottom: -20px;
-  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease;
+}
+.our-portfolio-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.1),
+    0px 1px 1px rgba(46, 47, 66, 0.06), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .our-portfolio-card img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
   display: block;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Overlay */
-.our-portfolio-card .overlay {
+/* Portfolio info altta sabit */
+.portfolio-info {
   position: absolute;
-  top: 0;
+  bottom: 0;
+  height: 120px;
+  width: 360px;
+  background-color: var(--white);
+  padding: 20px 16px;
+  box-sizing: border-box;
+  border-top: 1px solid var(--cornflower);
+  text-align: left;
+  z-index: 3; /* overlay'den üstte */
+}
+
+.overlay {
+  position: absolute;
+  bottom: -100%; /* başlangıçta gizli kalıt  */
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 100%;
   background-color: var(--iris);
   color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
+  transition: bottom 0.6s ease;
   z-index: 2;
 }
 
-.our-portfolio-card .overlay {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+.our-portfolio-card:hover .overlay {
+  bottom: 0; /* hover ile yukarı çıkar */
 }
 
-.our-portfolio-card label:active ~ .overlay {
-  opacity: 1;
-}
-
-.portfolio-info {
-  padding: 32px 16px;
-  border-bottom: 1px solid var(--cornflower);
-
-  flex-direction: column;
-  gap: 8px;
-
-  text-align: left;
-  cursor: pointer;
-}
 .portfolio-info h3 {
   color: var(--navy-blue);
 }
@@ -512,7 +518,6 @@ footer .container {
 .footer .social-icons a {
   margin: 0;
   padding: 0;
-  cursor: default;
 }
 
 .footer .icon-wrapper {
